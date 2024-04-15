@@ -1,8 +1,12 @@
-﻿namespace BinarySearchTrees
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BinarySearchTrees
 {
-
-
-    class BinarySearchTree
+    class AVLTree
     {
         public class Node
         {
@@ -14,13 +18,29 @@
 
         public Node root;
 
-        public void NodeInitizled()
+
+        public AVLTree()
+        {
+            if (root == null)
+            {
+                if (root == null)
+                {
+                    root = new Node()
+                    {
+                        value = 0,
+                        hight = 0,
+                    };
+                }
+            }
+        }
+
+        public AVLTree(int rootValue)
         {
             if (root == null)
             {
                 root = new Node()
                 {
-                    value = 0,
+                    value = rootValue,
                     hight = 0,
                 };
             }
@@ -69,6 +89,7 @@
             {
                 PNode.hight = PNode.right.hight + 1;
             }
+            CheckBalance();
         }
 
         public List<Tuple<Node, Node>> CheckBalance()
@@ -94,7 +115,6 @@
                     }
                 }
             }
-
             return targetNodes;
         }
     }
