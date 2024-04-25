@@ -2,7 +2,7 @@
 {
 
 
-    class BinaryTree
+    class BinarySearchTree
     {
         public class Node
         {
@@ -15,7 +15,7 @@
         public Node root;
 
 
-        public BinaryTree()
+        public BinarySearchTree()
         {
             if (root == null)
             {
@@ -30,7 +30,7 @@
             }
         }
 
-        public BinaryTree(int rootValue)
+        public BinarySearchTree(int rootValue)
         {
             if (root == null)
             {
